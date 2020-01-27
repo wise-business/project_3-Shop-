@@ -353,6 +353,40 @@ html {
 $h2_color: rgb(48, 48, 48);
 $border_card: #d3d3d3;
 
+//mixin для элементов блока search
+@mixin search () {
+    margin: 0 12.5px;
+    font-size: 14px;
+    font-family: "Georgia";
+    color: rgb(96, 96, 96);
+    font-style: italic; 
+    position: relative;
+}
+// mixin псевдо элемент для элементов блока search
+@mixin serarch_before() {
+    position: absolute;
+    content: "";
+    height: 1.5px;
+    width: 100%;
+    background-color: #303030;
+    bottom: -4px;
+    left: 0;
+}
+
+// mixin для логотипов социальных сетей
+@mixin social_icons ($social) {
+    @if ($social == 'twitter') {
+        background: url(/images/icons/twitter.png) center center / contain no-repeat;
+    } @else if ($social == 'facebook') {
+        background: url(/images/icons/facebook.png) center center / contain no-repeat;
+    } @else {
+        background: url(/images/icons/instagram.png) center center / contain no-repeat;
+    }
+    width: 33px;
+    height: 33px;
+    margin-right: 15px;
+}
+
 body {
     max-width: 1550px;
     background-color: #e5e5e5;
@@ -440,25 +474,25 @@ header {
     margin-bottom: 65px;
 
     &-category {
-        margin: 0 12.5px;
-        font-size: 14px;
-        font-family: "Georgia";
-        color: rgb(96, 96, 96);
-        font-style: italic;     
+       @include search();
+       
+       &:before {
+            @include serarch_before();
+       }     
     }
     &-size {
-        margin: 0 12.5px;
-        font-size: 14px;
-        font-family: "Georgia";
-        color: rgb(96, 96, 96);
-        font-style: italic;
+        @include search(); 
+
+        &:before {
+            @include serarch_before();
+       } 
     }
     &-cost {
-        margin: 0 12.5px;
-        font-size: 14px;
-        font-family: "Georgia";
-        color: rgb(96, 96, 96);
-        font-style: italic;
+        @include search();
+        
+        &:before {
+            @include serarch_before();
+       } 
     }
 }
 .goods {
@@ -508,6 +542,7 @@ header {
         margin: 3px;
         color: white;
         background-color: #303030;
+        cursor: pointer;
     }
     div.pages-now {
         background-color: white;
@@ -534,6 +569,7 @@ footer {
             a {
                 text-decoration: none;
                 color: #b2b2b2;
+                line-height: 1.917;
             }
         }
     }
@@ -545,6 +581,7 @@ footer {
         
         & > div {
             margin: 0 auto;
+            line-height: 1.917;
         }   
     }
     .footer-right {
@@ -552,6 +589,26 @@ footer {
         
         & > div {
             margin: 0 auto;
+
+            & > div {
+                color: #b2b2b2;
+                line-height: 1.917;
+
+                & > div {
+                    flex-direction: initial;
+                    margin-top: 23px;
+                    .twitter{
+                        @include social_icons('twitter');
+                    }
+                    .facebook{
+                        @include social_icons(facebook);
+                    }
+                    .instagram{
+                        @include social_icons(instagram);
+                    }
+                }
+            }
+
         }   
     }
 }
