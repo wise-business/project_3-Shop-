@@ -29,7 +29,7 @@ class Catalog {
             this.preoloaderOff();
             let data = JSON.parse(xhr.responseText);
             console.log(xhr);
-            data.forEach( (val,index)=> {
+            data.forEach( (val,index) => {
                 new Goods(val.pic,val.alt,val.title,val.price).renderGoods()
             });
         });
