@@ -1,0 +1,133 @@
+.h1 {
+    font-size: 36px;
+    text-align: center;
+    color: rgb(48, 48, 48);
+    text-transform: uppercase;
+    font-family: "Myriad Pro";
+    margin: 121px 0 0 0;
+}
+.paragraph {
+    color: #606060;
+    text-align: center;
+    font-size: 20px;
+    margin: 10px auto 96px auto;
+}
+// ======================================================== section goods ======================================================
+
+.goods__title {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #e5e5e5;
+}
+.goods__title-left {
+    display: flex;
+    margin-left: 10px;
+}
+.goods__title-right {
+    display: flex;
+}
+.goods__title-text {
+    font-size: 12px;
+    font-family: "Myriad Pro";
+    color: rgb(144, 144, 144);
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.goods__title-text_margin-left {
+    margin-left: 94px;
+}
+.goods__title-text_margin_36 {
+    margin-left: 53px;
+    margin-right: 36px;
+}
+.goods__title-text_margin_53 {
+    margin-right: 53px;
+}
+.goods__title-text_margin_10 {
+    margin-right: 10px;
+}
+/*      /----------------------------------\
+        |    Оформление карточек goods     |
+        \----------------------------------/
+*/
+.goods__block {
+    display: flex;
+    justify-content: space-between;
+    padding: 19px 13px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    border-bottom: 2px solid #e5e5e5;
+}
+.goods__block-left {
+    display: flex;
+    align-items: center;
+}
+.goods__block-photo {
+    background: center / contain no-repeat;
+    background-image: url(/images/catalog-img/1.jpg);
+    border: 1px solid rgb(229, 229, 229);
+    background-color: rgb(247, 247, 247);
+    width: 98px;
+    height: 98px; 
+}
+.goods__block-title {
+    margin-left: 24px;
+}
+.good__title-description {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Myriad Pro";
+    color: rgb(48, 48, 48);
+    text-transform: uppercase;
+}
+.good__title-article {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Myriad Pro";
+    color: #606060;
+}
+.goods__block-right {
+    display: flex;
+    align-items: center;
+}
+.goods__size {
+    font-size: 14px;
+    font-family: "Lato";
+    color: rgb(48, 48, 48);
+    text-transform: uppercase;    
+}
+.goods__quantity {
+    display: flex;
+    align-items: center;
+    margin: 0 74px 0 96px;
+    font-size: 14px;
+    font-family: "Lato";
+    color: rgb(48, 48, 48);
+    text-transform: uppercase;   
+}
+.goods__quantity-sign {
+    margin-left: 9px;
+}
+.goods__quantity-sign-value {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    padding: 3px;
+    box-sizing: border-box;
+    margin: 3px;
+}
+.goods__price {
+    font-size: 14px;
+    font-family: "Myriad Pro";
+    color: rgb(48, 48, 48);
+    text-transform: uppercase;     
+}
+.goods__delete {
+    font-size: 30px;
+    font-family: "Lato";
+    color: rgb(48, 48, 48);
+    text-transform: uppercase;
+    margin-left: 76px;
+    cursor: pointer;
+}

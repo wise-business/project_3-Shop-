@@ -3,9 +3,10 @@
     include_once($_SERVER['DOCUMENT_ROOT'].'/modules/function.php');
     include_once($_SERVER['DOCUMENT_ROOT'].'/config/config.php');
 
-    if( isset($_POST) ) {
-
+    if( !empty($_POST) ) {
+       
         if( !empty($_POST['login']) ) {
+
             $error = '';
             $login = $_POST['login'];
             $password = md5(md5($_POST['password'])); // двойное шифрование
@@ -15,8 +16,8 @@
                                     AND `password` = '$password'";
             $result = $link -> query($query);
             if($result -> num_rows != 0) {
+
                 $user = $result -> fetch_assoc();
-            
                 session_start();
                 $_SESSION['id_user'] = $user['id'];
                 header('location:'.$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/account.php');
@@ -52,13 +53,13 @@
             <input type="submit" value="Вход">
         </form>
 
-        <?php if( isset($error) ):?>
+        <?php if( !empty($error) ):?>
             <?= $error?>
         <?php endif;?>
 
 <?php
-    $footer_config = [
-        'js' => ['login.js']
-    ];
-    include_once($_SERVER['DOCUMENT_ROOT'].'/modules/footer.php');
+    // $footer_config = [
+        // 'js' => ['login.js']
+    // ];
+    // include_once($_SERVER['DOCUMENT_ROOT'].'/modules/footer.php');
 ?>

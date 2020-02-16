@@ -352,26 +352,7 @@ html {
 */
 $h2_color: rgb(48, 48, 48);
 $border_card: #d3d3d3;
-
-//mixin для элементов блока search
-@mixin search () {
-    margin: 0 12.5px;
-    font-size: 14px;
-    font-family: "Georgia";
-    color: rgb(96, 96, 96);
-    font-style: italic; 
-    position: relative;
-}
-// mixin псевдо элемент для элементов блока search
-@mixin serarch_before() {
-    position: absolute;
-    content: "";
-    height: 1.5px;
-    width: 100%;
-    background-color: #303030;
-    bottom: -4px;
-    left: 0;
-}
+$color_special: #ffa200;
 
 // mixin для логотипов социальных сетей
 @mixin social_icons ($social) {
@@ -399,64 +380,74 @@ body {
     padding: 33px 45px;
     box-sizing: border-box;
 }
-header {
+/* 
+=======================================================================================================================
+------------------------------------------------_header_---------------------------------------------------------------
+=======================================================================================================================
+*/ 
+.header {
     display: flex;
     justify-content: space-between;
     padding-bottom: 38px;
     border-bottom: 2px solid #e5e5e5;
+}
+.header-left {
+    display: flex;
+    align-items: center;
 
-    .header-left {
-        display: flex;
-        align-items: center;
+    .header-left__logo {
+        cursor: pointer;
+        background: url(/images/icons/logo.jpg) center/cover no-repeat;
+        width: 42px;
+        height: 42px;  
+    }
+    .menu {
 
-        div {
+        .menu__link {
+            text-decoration: none;
             margin: 0 15px;
             font-size: 14px;
             font-family: "Myriad Pro";
-            color: rgb(48, 48, 48);   
-        }
-        a {
-            cursor: pointer;
-            background: url(/images/icons/logo.jpg) center/cover no-repeat;
-            width: 42px;
-            height: 42px;  
-        }
+            color: rgb(48, 48, 48); 
+        }  
     }
-
-    .header-right {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-
-        .user {
-            display: flex;
-            justify-content: space-evenly;
-            text-align: center;
-            margin-right: 56px;
-
-            a {
-                text-decoration: none;
-                color: #ffa200;
-            }
-        }
-        .basket {
-            display: flex;
-            justify-content: space-evenly;
-            text-align: center;
-        }
-        img {
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-        }
+    .menu_margin-left {
+        margin-left: 42px;
     }
 }
+
+.header-right {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.block-and-icon {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-right: 56px;
+}
+.block-and-icon__icon {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.block-and-icon__block-link {
+    text-decoration: none;
+    color: #ffa200;
+}
+.block-and-icon__quantity {
+    color: $h2_color;
+}
+
+
 .road {
     padding-top: 34px;
     box-sizing: border-box;
     color: #949494;
     margin-bottom: 117px;
+    text-align: left;
 }
 .head {
     margin-bottom: 70px;
@@ -467,66 +458,6 @@ header {
     p {
         text-align: center;
     }
-}
-.search {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 65px;
-
-    &-category {
-       @include search();
-       
-       &:before {
-            @include serarch_before();
-       }     
-    }
-    &-size {
-        @include search(); 
-
-        &:before {
-            @include serarch_before();
-       } 
-    }
-    &-cost {
-        @include search();
-        
-        &:before {
-            @include serarch_before();
-       } 
-    }
-}
-.goods {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-
-    &-item {
-        flex-basis: calc(25% - 25px);
-        margin-bottom: 127px;
-        margin-right: 25px;
-
-       
-        img {
-            height: 257px;
-            width: 100%;
-            border: 1px solid $border_card;
-        }
-        .goods-item-title {
-            color: $h2_color;
-            font-size: 14px;
-            font-family: sans-serif;
-            font-weight: 600;
-            text-align: center;
-        }
-        .goods-item-price {
-            color: $h2_color;
-            font-size: 14px;
-            font-family: sans-serif;
-            font-weight: 300;
-            text-align: center;
-        }
-    }   
 }
 .pages {
     display: flex;
@@ -549,6 +480,47 @@ header {
         color: #303030;
     }
 }
+/*  /-----------------------\
+    |  Оформление preloader |
+    \-----------------------/
+*/
+.preloader {
+    width: 100%;
+    padding-bottom: 50vh;
+    box-sizing: border-box;
+    background: white;
+    position: relative;
+    opacity: 1;
+
+    .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60px;
+        height: 60px;
+        border: 7px solid $h2_color;
+        border-top-color: #ffa200;
+        border-radius: 50%;
+        margin: 0 auto;
+        transform: translate(-50%,-50%);
+        animation: spin 800ms infinite linear;
+    }
+    .done {
+        opacity: 0;
+    }
+}
+@keyframes spin {
+    0% {
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+/*  /-----------------------\
+    |  Оформление footer    |
+    \-----------------------/
+*/
 footer {
     display: flex;
     justify-content: space-between;

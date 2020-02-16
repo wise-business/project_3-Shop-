@@ -1,15 +1,17 @@
-<!-- файл где происходит регистрация пользователя -->
+<!-- файл личной страницы -->
 <?php
     include_once($_SERVER['DOCUMENT_ROOT'].'/config/config.php');
     include_once($_SERVER['DOCUMENT_ROOT'].'/modules/function.php');
 
     session_start();
-    if( isset($_SESSION['id_user']) ) {
-        $userData = getUserData($link,$_SESSION['id_user']);
-    }
-    else {
-        header('location: '.$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/login.php');
-    }
+    $userData = checkLoginUser($link);
+    
+    // if( isset($_SESSION['id_user']) ) {
+    //     $userData = getUserData($link,$_SESSION['id_user']);
+    // }
+    // else {
+    //     header('location: '.$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/login.php');
+    // }
     $header_files = [
         'title' => 'Страница пользователя',
         'styles' => ['style.css','account.css'] 
@@ -32,8 +34,7 @@
     <div class="wrapper">
         <h1>Личный кабинет</h1>
         <h2>Привет <?=$userData['surname'].' '.$userData['name']?></h2>
-
-
+        
 <?php
     $footer_config = [
         'js' => ['account.js']

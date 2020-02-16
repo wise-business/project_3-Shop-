@@ -17,9 +17,9 @@
         if(isset($_SESSION['id_user'])) {
             $userData = getUserData($link, $_SESSION['id_user']);
             return $userData;
+        } else {
+            header('location: '.$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/login.php');
+            return false;
         }
-        // } else {
-        //     header('location: '.$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/login.php');
-        // }
     }
 ?>

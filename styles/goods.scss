@@ -1,0 +1,26 @@
+.main {
+    text-align: center;
+}
+.goods-photo {
+    background: center/contain no-repeat;
+    background-image: url(/images/catalog-img/1.jpg);
+    height: 50vh;
+    width: 100%;
+}
+.add-to-basket {
+    background-color: #f68236;
+    color: white;
+    width: 175px;
+    margin: 50px auto;
+    text-transform: uppercase; 
+    font-family: "Myriad Pro";
+    font-size: 14px;
+    padding: 18px 25px;
+    cursor: pointer;
+
+    &:active {
+        background-color: white;
+        color: #f68236;
+
+    }
+}

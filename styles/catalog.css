@@ -1,1 +1,107 @@
-/* No CSS *//*# sourceMappingURL=catalog.css.map */
+#search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 65px;
+}
+
+#search-category {
+  margin: 0 12.5px;
+  font-size: 14px;
+  font-family: "Georgia";
+  color: #606060;
+  font-style: italic;
+  position: relative;
+}
+
+#search-category:before {
+  position: absolute;
+  content: "";
+  height: 1.5px;
+  width: 100%;
+  background-color: #303030;
+  bottom: -4px;
+  left: 0;
+}
+
+#search-size {
+  margin: 0 12.5px;
+  font-size: 14px;
+  font-family: "Georgia";
+  color: #606060;
+  font-style: italic;
+  position: relative;
+}
+
+#search-size:before {
+  position: absolute;
+  content: "";
+  height: 1.5px;
+  width: 100%;
+  background-color: #303030;
+  bottom: -4px;
+  left: 0;
+}
+
+#search-cost {
+  margin: 0 12.5px;
+  font-size: 14px;
+  font-family: "Georgia";
+  color: #606060;
+  font-style: italic;
+  position: relative;
+}
+
+#search-cost:before {
+  position: absolute;
+  content: "";
+  height: 1.5px;
+  width: 100%;
+  background-color: #303030;
+  bottom: -4px;
+  left: 0;
+}
+
+.goods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.goods-item {
+  -ms-flex-preferred-size: calc(25% - 25px);
+      flex-basis: calc(25% - 25px);
+  margin-bottom: 127px;
+  margin-right: 25px;
+}
+
+.goods-item img {
+  height: 257px;
+  width: 100%;
+  border: 1px solid #d3d3d3;
+}
+
+.goods-item .goods-item-title {
+  color: #303030;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.goods-item .goods-item-price {
+  color: #303030;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+/*# sourceMappingURL=catalog.css.map */
