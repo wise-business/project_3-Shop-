@@ -457,15 +457,16 @@ body {
   margin-bottom: 70px;
 }
 
-.head h1 {
+.head .h1 {
   text-align: center;
+  text-transform: uppercase;
 }
 
 .head p {
   text-align: center;
 }
 
-.pages {
+.pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -475,7 +476,7 @@ body {
   margin-bottom: 388px;
 }
 
-.pages div {
+.pagination .pagination__item {
   border: 1px solid #606060;
   width: 23px;
   height: 23px;
@@ -487,7 +488,7 @@ body {
   cursor: pointer;
 }
 
-.pages div.pages-now {
+.pagination .pagination__item_current {
   background-color: white;
   color: #303030;
 }
@@ -565,7 +566,7 @@ footer > div {
   width: 33.333333%;
 }
 
-footer > div h2 {
+footer > div h3 {
   font-size: 14px;
   font-family: "Myriad Pro";
   color: #303030;

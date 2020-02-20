@@ -21,32 +21,16 @@ $border_card: #d3d3d3;
     left: 0;
 }
 // ====================================================================================================== //
-#search {
+.search {
     display: flex;
     justify-content: center;
     margin-bottom: 65px;
-
-    &-category {
-       @include search();
-       
-       &:before {
-            @include serarch_before();
-       }     
-    }
-    &-size {
-        @include search(); 
-
-        &:before {
-            @include serarch_before();
-       } 
-    }
-    &-cost {
-        @include search();
-        
-        &:before {
-            @include serarch_before();
-       } 
-    }
+}
+.sub-categories {
+    display: none;
+}
+.sub-price {
+    display: none;
 }
 .goods {
     display: flex;

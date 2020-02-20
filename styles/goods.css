@@ -3,10 +3,7 @@
 }
 
 .goods-photo {
-  background: center/contain no-repeat;
-  background-image: url(/images/catalog-img/1.jpg);
   height: 50vh;
-  width: 100%;
 }
 
 .add-to-basket {

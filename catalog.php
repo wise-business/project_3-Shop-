@@ -4,46 +4,37 @@
         'title' => 'Каталог',
         'styles' =>['style.css','catalog.css'] 
     ];
-
     include_once($_SERVER['DOCUMENT_ROOT'].'/modules/header.php');
     // session_destroy();
-    
 ?>
-        <div class="road">главная / мужчинам</div>
+        <div class="road">
+            <span>Главная /</span>
+            <span> Все </span>
+            <span></span>
+        </div>
         <main>
             <section class="head">
-                <h1>МУЖЧИНАМ</h1>
+                <h1 class="h1">Общий каталог</h1>
                 <p>Все товары</p>
             </section>
-            <form id="search" method="GET">
+            <form class="search" method="GET">
                 <select name="categories">
-                    <!-- <option value="all">Все</option> -->
-                    <option value="1">Мужчинам</option>
-                    <option value="2">Женщинам</option>
-                    <option value="3">Детям</option>
+                    <option value="all">Все</option> 
+                    <option value="1" class="man">Мужчинам</option>
+                    <option value="2" class="woman">Женщинам</option>
+                    <option value="3" class="children">Детям</option>
                 </select>
-                <select name="sub-categories">
-                    <option value="all">Все</option>
-                    <option value="4">Обувь</option>
-                    <option value="5">Куртки</option>
-                    <option value="6">Костюмы</option>
-                    <option value="7">Рюкзаки</option>
+                <select name="sub-categories" class="sub-categories"></select>
+                <select name="sub-categories" class="sub-price">
+                    <option value="all_prices">Все цены</option>
+                    <option value="from_0_to_1000">О - 1000руб</option>
+                    <option value="from_1000_to_3000">100О - 3000руб</option>
+                    <option value="from_3000_to_6000">300О - 6000руб</option>
+                    <option value="from_6000_to_20000">600О - 20 000руб</option>
                 </select>
-                <!-- <select name="sub-categories">
-                    <option value="all">Все цены</option>
-                    <option value="8">О - 1000руб</option>
-                    <option value="9">100О - 3000руб</option>
-                    <option value="10">300О - 6000руб</option>
-                    <option value="11">600О - 20 000руб</option>
-                </select> -->
             </form>
             <section class="goods"></section>
-            <section class="pages">
-                <div class="pages-now">1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-            </section>
+            <section class="pagination"></section>
         </main>
 <?php
     $footer_config = [

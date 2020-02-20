@@ -1,4 +1,4 @@
-#search {
+.search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,61 +8,12 @@
   margin-bottom: 65px;
 }
 
-#search-category {
-  margin: 0 12.5px;
-  font-size: 14px;
-  font-family: "Georgia";
-  color: #606060;
-  font-style: italic;
-  position: relative;
+.sub-categories {
+  display: none;
 }
 
-#search-category:before {
-  position: absolute;
-  content: "";
-  height: 1.5px;
-  width: 100%;
-  background-color: #303030;
-  bottom: -4px;
-  left: 0;
-}
-
-#search-size {
-  margin: 0 12.5px;
-  font-size: 14px;
-  font-family: "Georgia";
-  color: #606060;
-  font-style: italic;
-  position: relative;
-}
-
-#search-size:before {
-  position: absolute;
-  content: "";
-  height: 1.5px;
-  width: 100%;
-  background-color: #303030;
-  bottom: -4px;
-  left: 0;
-}
-
-#search-cost {
-  margin: 0 12.5px;
-  font-size: 14px;
-  font-family: "Georgia";
-  color: #606060;
-  font-style: italic;
-  position: relative;
-}
-
-#search-cost:before {
-  position: absolute;
-  content: "";
-  height: 1.5px;
-  width: 100%;
-  background-color: #303030;
-  bottom: -4px;
-  left: 0;
+.sub-price {
+  display: none;
 }
 
 .goods {

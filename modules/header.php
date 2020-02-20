@@ -22,11 +22,11 @@
     <div class="wrapper">
         <header class="header">
             <div class="header-left">
-                <a href="#" class="header-left__logo"></a>
+                <a href="/" class="header-left__logo"></a>
                 <nav class="menu menu_margin-left">
-                    <a href="#" class="menu__link">Женщинам</a>
-                    <a href="#" class="menu__link">Мужчинам</a>
-                    <a href="#" class="menu__link">Детям</a>
+                    <a href="/catalog.php?id=2" class="menu__link">Женщинам</a>
+                    <a href="/catalog.php?id=1" class="menu__link">Мужчинам</a>
+                    <a href="/catalog.php?id=3" class="menu__link">Детям</a>
                     <a href="#" class="menu__link">Новинки</a>
                     <a href="#" class="menu__link">О нас</a>
                 </nav>

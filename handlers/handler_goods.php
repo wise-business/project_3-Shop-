@@ -1,9 +1,9 @@
 <?php
     session_start();
-    
+    // session_destroy();
     if( !empty($_GET['id']) ) {
 
-        if( empty($_SESSION['basket']) ) {
+        if( !isset($_SESSION['basket']) ) {
             $_SESSION['basket'] = [];
         }
         $not_find_id = true; //--------------флаг для отслеживания id товара, что бы не повторять добавления в $_SESSION['basket]
@@ -12,6 +12,7 @@
             if($value['id'] == $_GET['id']) {
                 $_SESSION['basket'][$key]['quantity']++;
                 $not_find_id = false;
+                break;
             } 
         }
         if($not_find_id) {

@@ -452,19 +452,20 @@ body {
 .head {
     margin-bottom: 70px;
 
-    h1 {
+    .h1 {
         text-align: center;
+        text-transform: uppercase;
     }
     p {
         text-align: center;
     }
 }
-.pages {
+.pagination {
     display: flex;
     justify-content: center;
     margin-bottom: 388px;
 
-    div {
+    .pagination__item{
         border: 1px solid rgb(96, 96, 96);
         width: 23px;
         height: 23px;
@@ -475,7 +476,7 @@ body {
         background-color: #303030;
         cursor: pointer;
     }
-    div.pages-now {
+    .pagination__item_current {
         background-color: white;
         color: #303030;
     }
@@ -528,7 +529,7 @@ footer {
     & > div {
         width: 33.333333%;
 
-        h2 {
+        h3 {
             font-size: 14px;
             font-family: "Myriad Pro";
             color: rgb(48, 48, 48);
