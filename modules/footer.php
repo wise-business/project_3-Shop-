@@ -1,7 +1,7 @@
 <footer>
             <div class="footer-left">
                 <div>
-                    <h3>Колекции</h3>
+                    <h6>Колекции</h6>
                     <div>
                         <a href="#">Женщинам (1725)</a>
                         <a href="#">Мужчинам (635)</a>
@@ -12,7 +12,7 @@
             </div>
             <div class="footer-center">
                 <div>
-                    <h3>Магазин</h3>
+                    <h6>Магазин</h6>
                     <div>
                         <a href="#">О нас</a>
                         <a href="#">Доставка</a>
@@ -23,7 +23,7 @@
             </div>
             <div class="footer-right">
                 <div>
-                    <h3>Мы в социальных сетях</h3>
+                    <h6>Мы в социальных сетях</h6>
                     <div>
                         <span>Сайт разработан в inordic</span>
                         <span>2018 &copy; Все права защищены</span>

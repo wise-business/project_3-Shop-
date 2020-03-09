@@ -1,1 +1,117 @@
-/* No CSS *//*# sourceMappingURL=account.css.map */
+.add {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  border: 2px solid #606060;
+}
+
+.h2 {
+  text-align: center;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form__block-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 30px;
+  margin: 10px 0;
+  outline: none;
+  max-width: 600px;
+  border: 1px solid #ffa200;
+  font-family: "Lato";
+  font-size: 19px;
+}
+
+.form__file {
+  border: none;
+}
+
+::-webkit-input-placeholder {
+  font-size: 19px;
+  color: #3434a0;
+  -webkit-transition: 400ms all;
+  transition: 400ms all;
+  text-overflow: hidden;
+}
+
+:-ms-input-placeholder {
+  font-size: 19px;
+  color: #3434a0;
+  -webkit-transition: 400ms all;
+  transition: 400ms all;
+  text-overflow: hidden;
+}
+
+::-ms-input-placeholder {
+  font-size: 19px;
+  color: #3434a0;
+  -webkit-transition: 400ms all;
+  transition: 400ms all;
+  text-overflow: hidden;
+}
+
+::placeholder {
+  font-size: 19px;
+  color: #3434a0;
+  -webkit-transition: 400ms all;
+  transition: 400ms all;
+  text-overflow: hidden;
+}
+
+.form__input:focus::-webkit-input-placeholder {
+  text-indent: 600px;
+  -webkit-transition: 400ms text-indent;
+  transition: 400ms text-indent;
+  white-space: nowrap;
+}
+
+.form__input:focus:-ms-input-placeholder {
+  text-indent: 600px;
+  -webkit-transition: 400ms text-indent;
+  transition: 400ms text-indent;
+  white-space: nowrap;
+}
+
+.form__input:focus::-ms-input-placeholder {
+  text-indent: 600px;
+  -webkit-transition: 400ms text-indent;
+  transition: 400ms text-indent;
+  white-space: nowrap;
+}
+
+.form__input:focus::placeholder {
+  text-indent: 600px;
+  -webkit-transition: 400ms text-indent;
+  transition: 400ms text-indent;
+  white-space: nowrap;
+}
+
+.form__submit {
+  color: #3434a0;
+  background-color: #bec02f;
+  cursor: pointer;
+}
+/*# sourceMappingURL=account.css.map */
